@@ -40,3 +40,9 @@ git clone url_du_repository
 git remote add origin https://github.com/francosi/mon-jardin-dans-ma-rue.git
 git push -u origin master
 
+//recuperer le code depuis git hub
+git clone URL
+
+//recuperer les derniere modifications de github (modif faites par un autre contributeur).
+git pull origin master
+

@@ -46,3 +46,17 @@ git clone URL
 //recuperer les derniere modifications de github (modif faites par un autre contributeur).
 git pull origin master
 
+//Afficher les branches du projet (une * est  placé devant la branch courante)
+git branch
+
+//Creer une branche
+git branche nom-de-la-branche
+
+//changer de branches
+git checkout nom-de-la-branche-cible
+
+
+//Fusionner deux branches (rammener la branche nom-branche dans master)
+//se positionner sur la branche master et faire:
+git merge nom-branche
+

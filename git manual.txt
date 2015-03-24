@@ -1,0 +1,28 @@
+Creer un repository:
+Se positionner dans le repertoire et faire:
+git init
+
+Ajouter un fichier à l'index:
+git add nom fichier
+
+Ajouter tous les fichiers du repertoire:
+git add .
+
+Commiter tous les fichier du repository qui sont dans l'index.
+git commit -m "message qui decrit les modifications"
+
+Voir le status du repository (est ce que tous les fichier on bien été indexés ou commités)
+git status
+
+Voir le l'historique des modifications:
+git log
+
+Se positionner sur un ancien commit.
+
+git checkout numero_du_cha_recuperer_dans_lhistorique
+
+Se positionner sur le dernier commit
+
+git checkout master
+
+

@@ -35,4 +35,8 @@ git remote
 
 git clone url_du_repository
 
+//Ajouter un remote (github) qui recupere le projet local (on passe l'url du projet github)
+
+git remote add origin https://github.com/francosi/mon-jardin-dans-ma-rue.git
+git push -u origin master
 

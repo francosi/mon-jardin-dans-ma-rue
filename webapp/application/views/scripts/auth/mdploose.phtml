@@ -1,0 +1,16 @@
+<?php $this->doctype('XHTML1_STRICT'); ?>
+
+<div id="lien_retour">
+  <a href="<?php echo $this->baseUrl();?>">Retour à la page de connexion</a>
+</div>  
+
+<?php if(!empty($this->message)) : ?>
+<p id="message"><?php echo $this->escape($this->message); ?></p>
+<?php endif; ?>   
+ 
+<div id="form_mdploose">
+  <?php
+    $this->form->setAction($this->url());
+    echo $this->form;
+  ?>  
+</div>   

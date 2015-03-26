@@ -1,0 +1,90 @@
+
+
+
+<?php if(!empty($this->message)) : ?>
+<p id="message"><?php echo $this->escape($this->message); ?></p>
+<?php endif; ?> 
+
+
+<div class="connection">
+	<div id="facebookConnection">
+		<h2 >
+			Avec Facebook 
+			<a id="lienFacebook" href="<?php echo $this->baseUrl();?>/auth/login/greenpodid/<?php echo $this->greenid;?>?provider=facebook&lat=0&long=0&id=<?php if($this->greenid!=""){echo $this->greenid;}else{echo "none";}?>" title="Connexion Facebook"><img alt="" class="connectionFacebook" src="<?php echo $this->baseUrl();?>/images/facebook_2.png"></a>  
+		</h2>
+		<h2 class="colorVert eras">ou</h2>
+	</div>
+	
+	<?php if( $this->greenid != ""):?>
+	<div id="inscriptionRedirection">
+		<h2 class="colorBleu">M'inscrire</h2>
+		<a  href="<?php echo $this->baseUrl();?>/auth/inscription/greenpodid/<?php echo $this->greenid;?>">ICI</a><br>
+		
+		<h2 class="colorVert eras">ou</h2>
+	</div>
+	<?php endif;?>
+	<div id="formConnection">
+		<h2 class="colorBleu"> Avec ton compte</h2>
+		<form method="POST" id="FormCompte" >
+					<input class="inputDesign" type="text" name="login" value="adresse@mail.com" onclick="if(this.value=='adresse@mail.com'){this.value='';}" onblur="if(this.value==''){this.value='adresse@mail.com';}" ><br>
+					<input class="inputDesign" type="password" name="password" value="..." onclick="if(this.value=='...'){this.value='';}" onblur="if(this.value==''){this.value='...';}"><br>
+					
+					<input type="hidden" name="latitude" id="latConnection">
+					<input type="hidden" name="longitude" id="longConnection"><br>
+<!-- 					<input class="submitDesign" type="submit" value="Connection" ><br> -->
+					<button class="submitDesign submitCompte" >Connexion</button><br>
+					<a class="eras" href="<?php echo $this->baseUrl();?>/auth/mdploose">Mot de passe perdu?</a>
+		</form>
+	</div>
+	
+	
+		
+</div>  
+
+<script type="text/javascript">
+	if (navigator.geolocation)// si la geolocalisation fonctionne
+	  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);// on appelle la fonction successCallback
+	else
+	  alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+	   
+	function successCallback(position){
+	  //alert("Latitude : " + position.coords.latitude + ", longitude : " + position.coords.longitude);
+
+	  $('#latConnection').val(position.coords.latitude);
+	  $('#longConnection').val(position.coords.longitude);
+	  $('#latInscription').val(position.coords.latitude);
+	  $('#longInscription').val(position.coords.longitude);// on remplit les différent input aves les positions 
+	  $('#lienFacebook').attr('href','<?php echo $this->baseUrl();?>/auth/login/greenpodid/<?php echo $this->greenid;?>?provider=facebook&lat='+position.coords.latitude+'&long='+position.coords.longitude+'&id=<?php if($this->greenid!=""){echo $this->greenid;}else{echo "none";}?>');
+	};  // on fait passer dans le lien facebook les parametre longitude et latitude
+	 
+	function errorCallback(error){// sinon on affiche les message d'erreur
+	  switch(error.code){
+	    case error.PERMISSION_DENIED:
+	      alert("L'utilisateur n'a pas autorisé l'accès à sa position");
+	      break;      
+	    case error.POSITION_UNAVAILABLE:
+	      alert("L'emplacement de l'utilisateur n'a pas pu être déterminé");
+	      break;
+	    case error.TIMEOUT:
+	      alert("Le service n'a pas répondu à temps");
+	      break;
+	    }
+	};
+
+	$('.submitCompte').click(function ()
+	{
+		$('#FormCompte').submit();
+	});
+
+	
+	$('#interface').removeClass('interface');
+	$('#interface').addClass('interface2');// changement de class pour ajouter la barre de menu a la vue
+	$('.Vue').addClass('backgroundBleu');// on change la couleur de la barre de menu
+	<?php if( $this->greenid != ""){?>
+	$('#textDescription').html('<h2>Adopter un GreenPod</h2>');// titre de la page
+	<?php }
+	else{?>
+	$('#textDescription').html('<h2>T\'identifier</h2>');// titre de la page
+	<?php }?>
+	$('#texteDescription').html("<h1>Mon jardin dans ma rue</h1");// titre de l'app
+</script>

@@ -1,0 +1,27 @@
+<?php
+
+$val = $this->test;
+$val1 = hexdec ($this->test);
+$val2 = $val1/1023;
+$val3 = $val2*100;
+echo $val3;
+//$val1 = 
+//$val = $val[0]*16^3+$val[1]*16^2+$val[2]*16^1+$val[3]*16^0;
+//$val = $val*100;
+
+$json = '{"version":"1.0.0","datastreams" : [ {
+        "id" : "moisture",
+        "current_value" : "'.$val3.'"
+    }
+  ]
+}';
+
+$config = array(
+    'adapter'   => 'Zend_Http_Client_Adapter_Curl',
+    'curloptions' => array(CURLOPT_FOLLOWLOCATION => true),
+);
+$client = new Zend_Http_Client('https://api.xively.com/v2/feeds/1538519856', $config);
+$client->setHeaders(array('Accept: application/json:Content-Type: application/json', 'X-ApiKey:JCxZW2wefbxufxH8uPuShZWsVBPqU2Dx28ToprHLtReDQbxP'));
+$client->setRawData($json, 'text/xml');
+$client->request('PUT');
+//print_r($client);

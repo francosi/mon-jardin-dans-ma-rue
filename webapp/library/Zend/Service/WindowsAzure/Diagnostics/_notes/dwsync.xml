@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ConfigurationDataSources.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationDiagnosticInfrastructureLogs.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationDirectories.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationInstance.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationLogs.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationObjectBaseAbstract.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationPerformanceCounters.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="ConfigurationWindowsEventLog.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="DirectoryConfigurationSubscription.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="Exception.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="LogLevel.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="Manager.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+<file name="PerformanceCounterSubscription.php" server="ftp.moriot.com//dke/deken-maps/" local="130142887800000000" remote="130142887800000000" />
+</dwsync>

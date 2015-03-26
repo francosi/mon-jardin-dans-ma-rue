@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><?php echo $this->escape($this->title); ?></title>      
+    
+    <meta name="viewport" content="width=1250" />
+    <meta name="viewport" content="initial-scale=0.82" />
+    <link rel=stylesheet type="text/css" href="<?php echo $this->baseUrl();?>/css/design.css"/>
+    <link rel=stylesheet type="text/css" href="<?php echo $this->baseUrl();?>/css/component.css"/>
+</head>
+	
+
+<body> 
+  
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/classie.js"></script>
+  
+  	<div class="header" >
+  		<div class="descriptionLayout" id="texteDescription"></div>
+  	</div>
+  	
+  	<div class="Vue" >
+  		<img class="imgburger" id="showLeft" alt="" src="<?php echo $this->baseUrl();?>/images/hamburger.png" height="50">
+  		<div class="descriptionVue" id="textDescription"></div>
+  	</div>	
+  	<div class="body">	
+		
+		<div id="interface" class="interface">
+			<?php echo $this->layout()->content; ?>
+		</div>
+	</div>
+  	
+	
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+		<h3>Menu</h3>
+		<a class="backgroundVert" href="<?php echo $this->baseUrl();?>/auth/index/greenpodid/<?php echo $this->layout()->greenId?>">Accueil</a>
+		<a class="backgroundBleu" href="<?php echo $this->baseUrl();?>/auth/login/greenpodid/<?php echo $this->layout()->greenId?>">Adopter</a>
+		<a class="backgroundRouge" href="<?php echo $this->baseUrl();?>/auth/selfie/greenpodid/<?php echo $this->layout()->greenId?>">Selfie </a>
+		<a class="backgroundJaune" href="<?php echo $this->baseUrl();?>/auth/adorer/greenpodid/<?php echo $this->layout()->greenId?>">J'adore</a>
+		<a class="backgroundGris" href="http://monjardindansmarue.fr/">En savoir +</a>
+		<img id="imglogo" class="imglogo" alt="" src="<?php echo $this->baseUrl();?>/images/logo.png" >
+	</nav>  
+	
+	   
+	<script type="text/javascript">
+	$('#flecheRetour').mouseover(function()
+	{
+		$('#flecheRetour').attr('src','<?php echo $this->baseUrl();?>/images/flecheN.png');
+	});
+	
+	$('#flecheRetour').mouseout(function()
+	{
+		$('#flecheRetour').attr('src','<?php echo $this->baseUrl();?>/images/flecheB.png');
+	});
+	
+	</script>
+		<script type="text/javascript">
+	var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+	showLeft = document.getElementById( 'showLeft' );
+
+	showLeft.onclick = function() {
+	classie.toggle( this, 'active' );
+	classie.toggle( menuLeft, 'cbp-spmenu-open' );
+	disableOther( 'showLeft' );
+	
+	
+};
+
+$('#showLeft').click(function ()
+{
+	if(!$('#showLeft').hasClass('imgburgerO'))
+	{
+		$('#showLeft').addClass('imgburgerO');
+		$('#showLeft').removeClass('imgburger');
+	}
+	
+	else if($('#showLeft').hasClass('imgburgerO'))
+	{
+		$('#showLeft').addClass('imgburger');
+		$('#showLeft').removeClass('imgburgerO');
+	}
+
+});
+
+function disableOther( button ) {
+if( button !== 'showLeft' ) {
+	classie.toggle( showLeft, 'disabled' );
+}
+
+}
+	</script>                              
+</body> 
+</html>

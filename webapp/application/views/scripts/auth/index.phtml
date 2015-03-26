@@ -1,0 +1,38 @@
+
+<div class="fpresentation">
+<?php if($this->greenId != "")
+{ ?>
+ Je suis un GreenPod<br>
+"chevrefeuille"<br>
+que veux tu faire ? 
+<?php }
+else 
+{ ?>
+Bienvenue dans l'application mobile,<br>
+que veux tu faire ? 
+<?php }?>
+
+</div>
+<div class="alignCenter">
+
+<?php if($this->greenId != "")
+{ ?>
+<a href="<?php echo $this->baseUrl();?>/auth/login/greenpodid/<?php echo $this->greenId;?>"><button class="btn btnacc1" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/plant_icon.png">M'adopter / t'identifier</button></a>
+	
+<?php }
+else 
+{ ?>
+<a href="<?php echo $this->baseUrl();?>/auth/login/greenpodid/<?php echo $this->greenId;?>"><button class="btn btnacc1" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/plant_icon.png">T'identifier</button></a>
+	
+<?php }?>
+	<p class="pClass colorGris eras">j'ai besoin d'être aimé, arrosé, ...</p>
+	<a href="<?php echo $this->baseUrl();?>/auth/selfie/greenpodid/<?php echo $this->greenId;?>"><button class="btn btnacc2" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/camera_icon.png">Partager un Selfie</button></a>
+	<p class="pClass colorGris eras">Avec des sourires et des plantes</p>
+	<a href="<?php echo $this->baseUrl();?>/auth/adorer/greenpodid/<?php echo $this->greenId;?>"><button class="btn btnacc3" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/coeur_icon.png">Crier j'adore !</button></a>
+	
+	<a href="http://monjardindansmarue.fr/"><button class="btn btnacc4" ><span class="left" >En savoir + sur</span> </button>
+	<img id="imglogo" class="imglogo2" alt="" src="<?php echo $this->baseUrl();?>/images/logo.png" ></a>
+</div>
+<script>
+$('#texteDescription').html("<h1>Mon jardin dans ma rue</h1");
+</script>

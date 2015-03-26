@@ -1,0 +1,862 @@
+
+@font-face {
+	font-family: "claireHand";
+    src: url('/webapp/police/ClaireHandRegular.ttf');
+
+}
+
+
+@font-face {
+	font-family: "Eras_Demi";
+    src: url('/webapp/police/Eras_Demi_ITC.ttf');
+
+}
+
+.eras
+{
+	font-family: Eras_Demi;
+}
+
+.pClass
+{
+	margin-bottom: 30px;
+	margin-top: 0px;	
+}
+
+@media screen and (min-width: 800px) { 
+	.descriptionLayout
+	{
+		color: #F3ECDA;
+		font-family: "claireHand";
+		position: absolute;
+		left: 0px;
+		top: 20px;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.menu
+	{
+		background: #8EB277;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		width: 250px;
+		border: solid 1px #8EB277;
+	}
+	
+	.interface
+	{
+		background: #F3ECDA;
+		position: absolute;
+		top: -80px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+	}
+	.interface2
+	{
+		background: #F3ECDA;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+	}
+	
+	.header
+	{
+		background: #779C73;
+		position: absolute;
+		left:0px;
+		right:0px;
+		top:0px;
+		height: 100px;
+	}
+	
+	.Vue
+	{
+		width: 100%;
+		font: claire-hand;
+		position: absolute;
+		top: 100px;
+		left: 0px;
+		right: 0px;
+		height: 80px;
+		text-align: center;
+		color: #F3ECDA;
+	}
+	
+	.body
+	{
+		background: #c7c7c7;
+		position: absolute;
+		top: 180px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+	
+	.imglogo
+	{
+		position: absolute;
+		top: 70%;
+		left: 20px;
+		width: 200px;
+		height: 200px;
+	}
+	
+	.imglogo2
+	{
+		position: absolute;
+		left: 65%;
+		width: 150px;
+		height: 150px;
+		margin: -100px;
+	}
+	
+	.imgburger
+	{
+		position: absolute;
+		top: 0px;
+		left: 50px;
+		width: 80px;
+		height: 80px;
+	}
+	
+	.imgburgerO
+	{
+		position: absolute;
+		top: 0px;
+		left: 250px;
+		width: 80px;
+		height: 80px;
+	}
+	
+	#cssmenu {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  width: 219px;
+	}
+	#cssmenu li {
+	  font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;  
+	}
+	
+	#cssmenu ul {  
+	  padding-left: 0px;  
+	}
+	
+	#cssmenu a {
+	  background: white;
+	  border-bottom: 1px solid #8EB277;
+	  color: black;
+	  display: block;
+	  margin: 0;
+	  padding: 8px 12px;
+	  text-decoration: none;
+	  font-weight: normal;
+	}
+	#cssmenu a:hover {
+	  background: #2580a2 url("../images/hover.gif") left center no-repeat;
+	  color: #fff;
+	  padding-bottom: 8px;
+	}
+	
+	#carte
+	{
+		border-radius: 20px;	
+	}
+	
+	.leftBody
+	{
+		position: absolute;
+		top:0px;
+		left:0px;
+		width: 40%;
+		bottom:0px;
+		padding: 5%;
+		border-right: solid 1px #3e3e3e;
+	}
+	
+	.rightBody
+	{
+		position: absolute;
+		top:0px;
+		right:0px;
+		width: 40%;
+		bottom:0px;	
+		padding: 5%;
+		border-left: solid 1px #3e3e3e;
+	}
+	
+	#page
+	{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		padding-top: 250px;
+	}
+	
+	 #fondAuth
+	{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		
+	}
+	
+	#contentAuth
+	{
+		background: #f7f7f7;
+		padding: 30px;
+		margin: 0 auto;
+	    width: 400px;
+	}
+	
+	.deconnectionLink
+	{
+		position: absolute;
+		top:40%;
+		left:90%;
+		color:white;
+	}
+	
+	.imgArbuste
+	{
+		width: 50%;
+		height: 100%;
+		
+	}
+	
+	.profilContent
+	{
+		background: white;
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		top: 0;
+		left:50%;
+		
+	}
+	
+	.NomPlante
+	{
+		margin: 20px;
+		font: normal normal bold 30px/1.4em nimbus-sans-tw01con,sans-serif;
+	}
+	
+	.NomProprietaire
+	{
+		margin: 20px;
+		color: #8EB277;
+		font: normal normal bold 30px/1.4em nimbus-sans-tw01con,sans-serif;
+	}
+	
+	.imgProfil
+	{
+		width: 150px;
+		height: 150px;
+		border-radius: 75px;
+		position: absolute;
+		top: 40px;
+		left: 230px;
+	}
+	
+	.btn {
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  font-family: claireHand;
+	  color: white;
+	  font-size: 20px;
+	  background: #8EB277;
+	  padding: 10px 20px 10px 20px;
+	  border: solid #8EB277 7px;
+	  text-decoration: none;
+	}
+	
+	
+	
+	.btnAdopte
+	{
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+	}
+	
+	.InfoPot
+	{
+		margin-left:20px;
+		
+	}
+	
+	.DonnePot
+	{
+		color: #8EB277;
+	}
+	
+	.graphique
+	{
+		width: 400px;
+		height: 100px;
+		margin-left: 75px;
+	}
+	
+	.notif
+	{
+		position: absolute;
+		left: 70%;
+		top: 10px;
+	}
+	
+	.btnaccueil1
+	{
+		width: 400px;
+		display : table;
+		margin : 0 auto;
+		margin-top: 100px;
+		margin-bottom: 35px;
+		background: #1BA6C3;
+	    border: solid #1BA6C3 7px;
+		
+	}
+	
+	.btnaccueil2
+	{
+		width: 400px;
+		display : table;
+		margin : 0 auto;
+		margin-top: 35px;
+		margin-bottom: 35px;
+		background: #ED6857;
+	    border: solid #ED6857 7px;
+	}
+	
+	.btnaccueil3
+	{
+		width: 400px;
+		display : table;
+		margin : 0 auto;
+		background: #F6C54C;
+	    border: solid #F6C54C 7px;
+	}
+	
+	.btnacc1
+	{
+		width: 500px;
+		display : table;
+		margin : 0 auto;
+		margin-top: 50px;
+		margin-bottom: 5px;
+		background: #1BA6C3;
+		border: solid #1BA6C3 7px;
+		
+	}
+	
+	.btnacc2
+	{
+		width: 500px;
+		display : table;
+		margin : 0 auto;
+		margin-top: 20px;
+		margin-bottom: 5px;
+		background: #ED6857;
+		border: solid #ED6857 7px;
+	}
+	
+	.btnacc3
+	{
+		width: 500px;
+		display : table;
+		margin : 0 auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: #F6C54C;
+		border: solid #F6C54C 7px;
+	}
+	
+	.btnacc4
+	{
+		width: 500px;
+		display : table;
+		margin : 0 auto;
+		margin-top: 20px;
+		padding-left: 13%;
+		background: #504F55;
+		border: solid #504F55 7px;
+	}
+	
+	
+	.fpresentation
+	{
+		text-align: center;
+		color: #8EB277;
+		font-size: 30px;
+		margin-top: 10px;
+		font-family: Eras_Demi;
+	}
+	
+	
+	.boxPhoto
+	{
+		margin: 5px;
+	    padding: 5px;
+	    height: 100px;
+	    width: 100px;
+	    float: left;
+	    text-align: center;
+		display: table-cell;
+	    vertical-align: middle;
+	    background: white;
+	}
+	
+	.boxPhoto img
+	{
+		line-height: 100px;
+	}
+	
+	
+	
+}
+
+.connection
+{
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+}
+
+
+#formConnection
+{
+	display: table;
+    margin: 0 auto;
+    margin-top: 10px;
+	width: 100%;	
+	
+	text-align: center;
+}
+
+#facebookConnection
+{
+	color: #1BA6C3;
+	display: table;
+    margin: 0 auto;
+	width: 100%;	
+	text-align: center;	
+}
+
+.inscription
+{
+	color: #1BA6C3;
+	display: table;
+    margin: 0 auto;
+	width: 100%;	
+	text-align: center;	
+}
+
+#inscriptionRedirection
+{
+	color: #1BA6C3;
+	display: table;
+    margin: 0 auto;
+	width: 100%;	
+	text-align: center;	
+	margin-bottom: 20px;	
+}
+
+.uploadFlickr
+{
+	color: #1BA6C3;
+	display: table;
+    margin: 0 auto;
+	width: 100%;	
+	text-align: center;
+}
+
+.reseauSociau
+{
+	color: #779C73;
+	display: table;
+    margin: 0 auto;
+	width: 100%;	
+	text-align: center;		
+}
+
+.right
+{
+	float: right;
+}
+
+.left
+{
+	float: left;
+}
+
+.alignCenter
+{
+	text-align: center;
+}
+
+.colorGris
+{
+	color: #504F55;
+}
+
+.colorBleu
+{
+	color: #1BA6C3;
+}
+
+.colorVert
+{
+	color: #779C73;
+}
+
+.backgroundBleu
+{
+	background: #1BA6C3;
+}
+
+.backgroundJaune
+{
+	background: #F6C54C;
+}
+
+.backgroundRouge
+{
+	background: #ED6857;
+}
+
+.backgroundBeige
+{
+	background: #F3ECDA;
+}
+
+.backgroundGris
+{
+	background: #504F55;
+}
+
+.backgroundVert
+{
+	background: #779C73;
+}
+
+body
+{
+	background: #F3ECDA;
+	font-family: claireHand ;
+}
+
+
+.inputDesign
+{
+	border:2px solid white;
+	border-radius:5px;
+	height: 30px;
+	width: 230px;
+	margin: 10px;	
+	text-align: center;
+}
+
+.submitDesign
+{
+	background: #1BA6C3;
+	border:2px solid #1BA6C3;
+	font-family: claireHand;
+	color: #F3ECDA;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+.submitDesign2
+{
+	background: #ED6857;
+	border:2px solid #ED6857;
+	font-family: claireHand;
+	color: #F3ECDA;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.displayNone
+{
+	display: none;
+}
+
+
+.displayBlock
+{
+	display: block;
+	text-align: center;
+}
+
+.upload
+{
+	width: 50px;
+    height: 50px;
+    background: url(/webapp/images/camera_icon2.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.upload2
+{
+	
+    margin-top: 30px;
+}
+
+.inputFile
+{
+	display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+@media screen and (max-width: 800px) { 
+	.descriptionLayout
+	{
+		text-align: center;
+		color: #F3ECDA;
+		font: "claire-hand";
+		position: absolute;
+		left: 0px;
+		top: 20px;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.btn {
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  font-family: claireHand;
+	  color: white;
+	  font-size: 20px;
+	  background: #8EB277;
+	  padding: 10px 20px 10px 20px;
+	  border: solid #8EB277 7px;
+	  text-decoration: none;
+	  width: 80%;
+	  margin-top:10px;
+	  height: 50px;
+	}
+	
+	.btnacc1
+	{
+		background: #1BA6C3;
+	  border: solid #1BA6C3 7px;
+	}
+	
+	.btnaccueil1
+	{
+		background: #1BA6C3;
+	  border: solid #1BA6C3 7px;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	}
+	
+	.btnacc2
+	{
+		background: #ED6857;
+	  border: solid #ED6857 7px;
+	}
+	
+	.btnaccueil2
+	{
+		background: #ED6857;
+	  border: solid #ED6857 7px;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	}
+	
+	.btnacc3
+	{
+		background: #F6C54C;
+	  border: solid #F6C54C 7px;
+	
+	}
+	
+	.btnaccueil3
+	{
+		background: #F6C54C;
+	  border: solid #F6C54C 7px;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	
+	}
+	
+	.btnacc4
+	{
+		background: #504F55;
+	  border: solid #504F55 7px;
+	  margin-top: 50px;
+	  padding-left: 10%;
+	
+	}
+	
+	.header
+	{
+		width: 100%;
+		background: #779C73;
+		font: claire-hand;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 100px;
+	}
+	
+	
+	
+	.interface
+	{
+		background: #F3ECDA;
+		position: absolute;
+		top: 100px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+	}
+	
+	.interface2
+	{
+		background: #F3ECDA;
+		position: absolute;
+		top: 170px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+	}
+	
+	.imglogo
+	{
+		position: absolute;
+		top:70%;
+		left: 40px;
+		width: 150px;
+		height: 150px;
+		
+	}
+	
+	.imglogo2
+	{
+		position: absolute;
+		left: 60%;
+		width: 150px;
+		height: 150px;
+	}
+	
+	.connection
+	{
+		position: absolute;
+		left: 0%;
+		top: 0%;
+		width: 100%;
+		height: 100%;
+	}
+
+	.imgburger
+	{
+		position: absolute;
+		top: 15px;
+		left: 10px;
+		width: 50px;
+		height: 50px;
+	}
+	
+	.imgburgerO
+	{
+		position: absolute;
+		top: 15px;
+		left: 250px;
+		width: 50px;
+		height: 50px;
+	}
+	
+	.deconnectionLink
+	{
+		position: absolute;
+		top:10%;
+		left:78%;
+		color:white;
+	}
+	
+	.fpresentation
+	{
+		text-align: center;
+		color: #8EB277;
+		font-size: 30px;
+		margin-top: 10px;
+		font-family: Eras_Demi;
+	}
+	
+	
+	.Vue
+	{
+		width: 100%;
+		font: claire-hand;
+		position: absolute;
+		top: 100px;
+		left: 0px;
+		right: 0px;
+		height: 70px;
+		text-align: center;
+		color: #F3ECDA;
+	}
+	
+	.boxPhoto
+	{
+		margin: 5px;
+	    padding: 5px;
+	    height: 100px;
+	    width: 100px;
+	    float: left;
+	    text-align: center;
+		display: table-cell;
+	    vertical-align: middle;
+	    background: white;
+	}
+	
+	.boxPhoto img
+	{
+		line-height: 100px;
+	}
+	
+	
+}
+
+.maposition
+{
+	position: absolute;
+	top: 80%;
+	left: 80%;
+	
+}
+
+.connectionFacebook
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}

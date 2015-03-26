@@ -1,0 +1,76 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.fancybox.pack.js"></script>
+<div class="displayBlock">
+<?php
+ 
+$api_key = 'f62beff3b18c8244e52f36cc8859ae24';
+ 
+$tag = 'Green%20CityZen,GreenPod';
+$perPage = 20;
+$url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search';
+$url.= '&api_key='.$api_key;
+$url.= '&tags='.$tag;
+$url.= '&per_page='.$perPage;
+$url.= '&format=json';
+$url.= '&nojsoncallback=1';
+ 
+$response = json_decode(file_get_contents($url));
+$photo_array = $response->photos->photo;
+ 
+// print ("<pre>");
+// print_r($response);
+// print ("</pre>");
+ 
+foreach($photo_array as $single_photo){
+ 
+$farm_id = $single_photo->farm;
+$server_id = $single_photo->server;
+$photo_id = $single_photo->id;
+$secret_id = $single_photo->secret;
+$size = 'm';
+ 
+$title = $single_photo->title;
+ 
+$photo_url = 'http://farm'.$farm_id.'.staticflickr.com/'.$server_id.'/'.$photo_id.'_'.$secret_id.'_'.$size.'.'.'jpg';
+list($width, $height, $type, $attr) = getimagesize($photo_url);
+
+
+echo "<div class=\"boxPhoto\">";
+if($width<=$height)
+{
+	echo "<a class='fancybox' rel='group' href='".$photo_url."' ><img title='SelfieMonJardinDansMaRue' src='".$photo_url."' height='90' /></a>";
+}
+
+else 
+{
+	echo "<a class='fancybox' rel='group' href='".$photo_url."' ><img title='SelfieMonJardinDansMaRue' src='".$photo_url."' width='90' /></a>";
+}
+echo "</div>";
+}
+ 
+?>
+
+</div>
+<script type="text/javascript">
+
+	$('#interface').removeClass('interface');
+	$('#interface').addClass('interface2');
+	$('#imglogo').addClass('displayNone');
+	$('.Vue').addClass('backgroundJaune');
+	$('#textDescription').html('<h2>Album photo</h2>');
+	$('#texteDescription').html("<h1>Mon jardin dans ma rue</h1");
+
+
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+			
+			prevEffect	: 'none',
+			nextEffect	: 'none'
+			
+		});
+	});
+
+</script>

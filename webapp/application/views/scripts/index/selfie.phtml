@@ -1,0 +1,121 @@
+<?php
+//Include phpFlickr
+require_once("phpFlickr.php");
+$error=0;
+$f = null;
+if($_POST){
+	/* Check if both name and file are filled in */
+	if(!$_POST['name'] || !$_FILES["file"]["name"]){
+		$error=1;
+	}else{
+		/* Check if there is no file upload error */
+		if ($_FILES["file"]["error"] > 0){
+			echo "Error: " . $_FILES["file"]["error"] . "<br />";
+		}else if($_FILES["file"]["type"] != "image/jpg" && $_FILES["file"]["type"] != "image/jpeg" && $_FILES["file"]["type"] != "image/png" && $_FILES["file"]["type"] != "image/gif"){
+			/* Filter all bad file types */
+			$error = 3;
+		}else if(intval($_FILES["file"]["size"]) > 5250000){
+			/* Filter all files greater than 512 KB */
+			$error = 4;
+		}else{
+			$dir= dirname($_FILES["file"]["tmp_name"]);
+			$newpath=$dir."/".$_FILES["file"]["name"];
+			rename($_FILES["file"]["tmp_name"],$newpath);
+			/* Call uploadPhoto on success to upload photo to flickr */
+			$status = uploadPhoto($newpath, $_POST["name"], $_POST['description'], 'Green CityZen, GreenPod');
+			echo var_dump($status);
+			if(!$status) {
+				$error = 2;
+			}
+		}
+	}
+}
+function uploadPhoto($path, $title, $description, $tag) {
+	$apiKey = "f62beff3b18c8244e52f36cc8859ae24";
+	$apiSecret = "e8744547f3d49283";
+	$permissions  = "write";
+	$token        = "72157650668363175-3c8204e58dd0f33e";
+	$f = new phpFlickr($apiKey, $apiSecret, true);
+	$f->setToken($token);
+	return $f->async_upload($path, $title, $description, $tag);
+}
+?>
+
+<div id="UploadFlickr" class="uploadFlickr">
+
+   <div id="bd" role="main">
+   <div id="mainbar" class="yui-b">	  
+
+<?php
+if (isset($_POST['name']) && $error==0) {
+
+	header ('Location:/webapp/index/album/');
+    echo "  <h2>Your file has been uploaded to <a href='http://www.flickr.com/photos/131088428@N06/' target='_blank'>rkj_flickr's photo stream</a></h2>";
+}else {
+    if($error == 1){
+        echo "  <font color='red'>Please provide both name and a file</font>";
+    }else if($error == 2) {
+        echo "  <font color='red'>Unable to upload your photo, please try again</font>";
+    }else if($error == 3){
+        echo "  <font color='red'>Please upload JPG, JPEG, PNG or GIF image ONLY</font>";
+    }else if($error == 4){
+        echo "  <font color='red'>Image size greater than 512KB, Please upload an image under 512KB</font>";
+    }
+?>
+<?php
+}
+?>
+	
+  <form  id="FormSelfie" method="post" accept-charset="utf-8" enctype='multipart/form-data'>
+    <input type="hidden" name="name" value="GreenCityzen" >
+    <div class="upload2" >
+    	<output id="out"></output>
+	    <div class="upload">
+	    	<input class="inputFile" type="file" id="files" name="file" />
+	    </div>
+	    
+    </div>
+    <input type="text" name="description" class="inputDesign" value="Commentaire" onclick="if(this.value=='Commentaire'){this.value='';}" onblur="if(this.value==''){this.value='Commentaire';}" /><br>
+	
+<!-- 	<input type="submit" class="submitDesign2 " value="Partager"> -->
+	<button class="submitDesign2 submitSelfie" >Partager</button><br>
+	
+  </form>
+      </div>
+    </div>
+ 
+</div>
+
+<script>
+if (window.FileReader) {
+    function handleFileSelect(evt) {
+      var files = evt.target.files;
+      var f = files[0];
+      var reader = new FileReader();
+
+      reader.onload = (function(theFile) {
+        return function(e) {
+          document.getElementById('out').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name, '" width="50"/>'].join('');
+        };
+      })(f);
+
+      reader.readAsDataURL(f);
+    }
+  } else {
+    alert('Ce navigateur ne supporte pas FileReader');
+  }
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+
+	$('.submitSelfie').click(function ()
+	{
+		$('#FormSelfie').submit();
+	});
+
+$('#interface').removeClass('interface');
+$('#interface').addClass('interface2');
+$('#imglogo').addClass('displayNone');
+$('.Vue').addClass('backgroundRouge');
+$('#textDescription').html('<h2>Partager un selfie</h2>');
+$('#texteDescription').html("<h1>Mon jardin dans ma rue</h1");
+</script>

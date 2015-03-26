@@ -1,0 +1,15 @@
+
+<div class="fpresentation">
+Bienvenue <?php echo $this->user->prenom;?><br>
+Je suis très content de te voir,<br>
+Que veux tu faire ?
+</div>
+
+<div class="alignCenter">
+	<a href="<?php echo $this->baseUrl()?>/index/map"><button class="btn btnaccueil1" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/map.png">Voir la carte de GreenPod</button></a>
+	<a href="<?php echo $this->baseUrl()?>/index/selfie"><button class="btn btnaccueil2" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/camera_icon.png">Partager un Selfie</button></a>
+	<a href="<?php echo $this->baseUrl()?>/index/album"><button class="btn btnaccueil3" ><img class="left" width="30"src="<?php echo $this->baseUrl();?>/images/album.png">Accéder à l'album</button></a>
+</div>
+<script>
+$('#texteDescription').html("<h1>Mon jardin dans ma rue</h1");
+</script>

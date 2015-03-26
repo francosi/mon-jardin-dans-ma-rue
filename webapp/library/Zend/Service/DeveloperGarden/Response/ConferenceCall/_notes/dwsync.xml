@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AddConferenceTemplateParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="AddConferenceTemplateParticipantResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="CCSResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="CommitConferenceResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="ConferenceCallAbstract.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="CreateConferenceResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="CreateConferenceResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="CreateConferenceTemplateResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="CreateConferenceTemplateResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceListResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceListResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceStatusResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceStatusResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceTemplateListResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceTemplateListResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceTemplateParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceTemplateParticipantResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceTemplateResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetConferenceTemplateResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetParticipantStatusResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetParticipantStatusResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetRunningConferenceResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="GetRunningConferenceResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="NewParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="NewParticipantResponseType.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="RemoveConferenceResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="RemoveConferenceTemplateParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="RemoveConferenceTemplateResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="RemoveParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="UpdateConferenceResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="UpdateConferenceTemplateParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="UpdateConferenceTemplateResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+<file name="UpdateParticipantResponse.php" server="ftp.moriot.com//dke/deken-maps/" local="130142884800000000" remote="130142884800000000" />
+</dwsync>

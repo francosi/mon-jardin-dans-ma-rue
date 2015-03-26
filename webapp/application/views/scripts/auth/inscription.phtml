@@ -1,0 +1,65 @@
+
+<div class="inscription">
+<h2 class="colorBleu">M'inscrire</h2>
+	<form method="post" action="" id="FormInscription">
+
+		<input class="inputDesign" type="text" name="nom"  value="Nom" onclick="if(this.value=='Nom'){this.value='';}" onblur="if(this.value==''){this.value='Nom';}" ><br>
+		<input class="inputDesign" type="text" name="prenom" value="Prénom" onclick="if(this.value=='Prénom'){this.value='';}" onblur="if(this.value==''){this.value='Prénom';}" ><br>
+		<input class="inputDesign" type="text" name="mail" value="adresse@mail.com" onclick="if(this.value=='adresse@mail.com'){this.value='';}" onblur="if(this.value==''){this.value='adresse@mail.com';}" ><br>
+		<input class="inputDesign" type="password" name="mdp" value="..." onclick="if(this.value=='...'){this.value='';}" onblur="if(this.value==''){this.value='...';}" ><br>
+		<input class="inputDesign" type="password" name="cmdp" value="..." onclick="if(this.value=='...'){this.value='';}" onblur="if(this.value==''){this.value='...';}" ><br>
+		
+		
+		
+<!-- 		<input class="submitDesign" value="Créer le compte" type="submit"> -->
+		<button class="submitDesign submitInscription" >Créer le compte</button><br>
+	
+
+	<input type="hidden" name="latitude" id="latInscription">
+	<input type="hidden" name="longitude" id="longInscription">
+	
+</form>
+
+</div>
+<script type="text/javascript">
+	if (navigator.geolocation)
+	  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+	else
+	  alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+	   
+	function successCallback(position){
+	  //alert("Latitude : " + position.coords.latitude + ", longitude : " + position.coords.longitude);
+
+	  $('#latConnection').val(position.coords.latitude);
+	  $('#longConnection').val(position.coords.longitude);
+	  $('#latInscription').val(position.coords.latitude);
+	  $('#longInscription').val(position.coords.longitude);
+	};  
+	 
+	function errorCallback(error){
+	  switch(error.code){
+	    case error.PERMISSION_DENIED:
+	      alert("L'utilisateur n'a pas autorisé l'accès à sa position");
+	      break;      
+	    case error.POSITION_UNAVAILABLE:
+	      alert("L'emplacement de l'utilisateur n'a pas pu être déterminé");
+	      break;
+	    case error.TIMEOUT:
+	      alert("Le service n'a pas répondu à temps");
+	      break;
+	    }
+	};
+
+
+	$('.submitInscription').click(function ()
+	{
+		$('#FormInscription').submit();
+	});
+
+	$('#interface').removeClass('interface');
+	$('#interface').addClass('interface2');
+	$('#imglogo').addClass('displayNone');
+	$('.Vue').addClass('backgroundBleu');
+	$('#textDescription').html('<h2>Adopter un GreenPod</h2>');
+	$('#texteDescription').html("<h1>Mon jardin dans ma rue</h1");
+</script>

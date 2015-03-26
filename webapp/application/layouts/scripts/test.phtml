@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><?php echo $this->escape($this->title); ?></title>      
+    
+    <meta name="viewport" content="width=1250" />
+    <meta name="viewport" content="initial-scale=0.82" />
+    
+	  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/site.css" />   
+	  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/tinyTips.css" />   
+	  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/dataTables.css" />  
+
+    <link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/style.ie7.css" type="text/css" media="screen" /><![endif]-->  
+                                       
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery-1.7.1.js"></script>  
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.tinyTips.js"></script>  
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/script_tinyTips.js"></script>  
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.dataTables.nightly.js"></script>    
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/script_dataTables.js"></script>  
+</head>
+<body> 
+  <div id="art-main">
+    <div id="corps">  
+      
+      <div id="vis_top_left"></div>  
+      <div id="vis_top_right"></div>
+      <div id="vis_bottom_left"></div>
+      <div id="vis_bottom_right"></div>
+          
+      <div id="corps_page"> 
+        
+        <div id="logo_area">
+          
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <p id="logo" class="ombre_text">
+                    <span class="logo_nom1">SOL</span>
+                    <img src="<?php echo $this->baseUrl();?>/images/terre.gif" alt="terre" />  
+                    <span class="logo_nom2">MAPS</span>
+                  </p>
+                </td> 
+                <td>
+                  <form id="recherche" name="recherche" action="<?php echo $this->baseUrl();?>" method="get">
+                  
+                      <table class="ombre">
+                        <tbody>
+                          <tr>
+                            <td class="td_gauche">
+                              <span>Recherche site :</span> 
+                            </td>   
+                            <td class="td_droite">
+                              <input type="text" id="keyword" name="keyword" value=""  /> 
+                            </td>
+                          </tr>
+                        </tbody>             
+                      </table>
+                      
+                  </form>  
+                </td>
+              </tr>
+            </tbody>             
+          </table>
+          
+        </div>     
+      
+        <div class="art-box art-sheet ombre">
+            <div class="art-box-body art-sheet-body">
+                <div class="art-layout-wrapper">
+                    <div class="art-content-layout">
+                        <div class="art-content-layout-row">
+                            <div class="art-layout-cell art-content">   
+                                                        
+                              <div class="art-box art-post">
+                                  <div class="art-box-body art-post-body">
+                              <div class="art-post-inner art-article">
+                              <div class="art-postcontent">
+                              <div class="art-content-layout">       
+                                                                              
+                              <div id="page">             
+                                  <div id="banniere_client"> 
+                                  
+                                  
+                                    <table id="bandeau_entete">
+                                      <tbody>
+                                        <tr>  
+                                          <td class="col_logo"><?php //echo $this->getLogo($this->baseUrl());?></td>              
+                                          <td class="col_titre"><h1 class="titre_client"><?php echo $this->escape($this->title); ?></h1></td> 
+                                        </tr>                
+                                      </tbody>
+                                    </table>    
+                                      
+                                  </div> 
+                                  
+                                  <div id="content">
+                                    <?php echo $this->layout()->content; ?>  
+                                  </div> 
+                              </div>
+                                                  
+                              </div>
+                              
+                                              </div>
+                                              <div class="cleared"></div>
+                                              </div>
+                              
+                              		<div class="cleared"></div>
+                                  </div>
+                              </div>
+    
+                              <div class="cleared"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cleared"></div>
+            </div>
+        </div>             
+        
+    
+        <div id="fil_ariane">
+          <?php echo $this->filAriane($this->baseUrl()); ?>     
+          <?php echo $this->logOut($this->baseUrl());?>  
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</body> 
+</html>

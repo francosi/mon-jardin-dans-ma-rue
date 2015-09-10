@@ -60,3 +60,18 @@ git checkout nom-de-la-branche-cible
 //se positionner sur la branche master et faire:
 git merge nom-branche
 
+//Voir tous les commit d'un fichier
+git blame nom-du-fichier
+
+//ignorer un fichier (par ex. log , temp, configuration) que l'on ne veut pas avoir dans git.
+Creer un fichier qui s'appelle .gitignore dans lequel on place le nom des fichier à ignorer.
+
+//Contribuer à un projet open source.
+Aller sur le projet en question et faire un fork (bouton fork en haut a droite). 
+L'effet de cette commande est de copier le projet sur mon propre espace github. 
+Ensuite je peux faire un git clone pour le recuperer sur ma machine locale.
+
+ //sortir du mode log
+ Taper :q
+ 
+

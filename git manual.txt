@@ -74,6 +74,24 @@ Aller sur le projet en question et faire un fork (bouton fork en haut a droite).
 L'effet de cette commande est de copier le projet sur mon propre espace github. 
 Ensuite je peux faire un git clone pour le recuperer sur ma machine locale.
 
+
+
+//Remove directory from git and local
+
+//You could checkout 'master' with both directories;
+
+git rm -r one-of-the-directories
+git commit -m "Remove duplicated directory"
+git push origin master
+
+//Remove directory from git but NOT local
+//As mentioned in the comments, what you usually want to do is remove this directory from git but not delete it entirely from the filesystem (local)
+//In that case use:
+
+git rm -r --cached myFolder
+
+
+
  //sortir du mode log
  Taper :q
  

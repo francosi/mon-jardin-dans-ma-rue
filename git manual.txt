@@ -25,9 +25,12 @@ git checkout numero_du_cha_recuperer_dans_lhistorique
 
 git checkout master
 
+//pour visualiser les depots distants:
+git remote -v
+
 //Faire un remote (j'ecris du code, ensuite je le commite en local ensuite je l'envois vers un remote)
 
-git remote
+git push origin master
 
 //recuperer un repository de githup en local
 //Se positionner sur la page du repository sur github et sur la droite cliquer HTTPS puis copier l'URL du projet
